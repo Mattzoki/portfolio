@@ -5,6 +5,7 @@ import { SpeedInsights } from "@vercel/speed-insights/react"
 function App() {
   return (
     <div className="App">
+      <SpeedInsights />
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
@@ -18,7 +19,7 @@ function App() {
         >
           Learn React
         </a>
-        <SpeedInsights />
+
       </header>
     </div>
   );
