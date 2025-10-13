@@ -11,6 +11,7 @@ import Experience from "./pages/Experience";
 import Contact from "./pages/Contact";
 import { SpeedInsights } from "@vercel/speed-insights/react";
 import { Analytics } from "@vercel/analytics/react";
+import ThemeToggle from "./components/ThemeToggle";
 
 export default function App() {
   return (
@@ -20,7 +21,10 @@ export default function App() {
       <header className={`${s.navbar}`}>
         <div className={`container ${s.navrow}`}>
           <NavLink to="/" className={s.brand} aria-label="Home">
-            <span className={s.logo}>NM</span> Nikhil Mathews
+            <div className={s.profile}>
+              <img src="/images/logo.jpg" alt="NM" className={s.logo} />
+              <span>Nikhil Mathews</span>
+            </div>
           </NavLink>
           <nav className={`space ${s.navlinks}`} aria-label="Primary">
             <NavLink to="/about">About</NavLink>
@@ -28,6 +32,7 @@ export default function App() {
             <NavLink to="/projects">Projects</NavLink>
             <NavLink to="/experience">Experience</NavLink>
             <NavLink to="/contact">Contact</NavLink>
+            {/* <ThemeToggle /> */}
           </nav>
         </div>
       </header>
